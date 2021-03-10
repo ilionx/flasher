@@ -46,24 +46,30 @@ preview-venster aan de rechterkant.
   - De ion-card-subtitle mag je verwijderen.
 2. Neem het eerste voorbeeld onder *inputs with labels* over uit
    de [documentatie van ion-input](https://ionicframework.com/docs/api/input).
-  - Voor ion-label, vul in: Hoeveel keer?
-  - Geef ion-input het attribuut *type="number"*.
+   - Voor ion-label, vul in: Hoeveel keer?
+   - Geef ion-input het attribuut *type="number"*.
 3. Kopieer de code uit punt 2, maar vervang de ion-input door een ion-range:
-  - <ion-range min="100" max="1000"></ion-range>
-  - Voor ion-label, vul in: Hoe lang?
-  - Voeg het attribuut *slot="start"* toe voor de juiste plaatsing van het label.
+   - <ion-range min="100" max="1000"></ion-range>
+   - Voor ion-label, vul in: Hoe lang?
+   - Voeg het attribuut *slot="start"* toe voor de juiste plaatsing van het label.
 4. Voeg <ion-button>Start</ion-button> toe.
 
 ## Opdracht 2: Angular
 
+Als je de vorige opdracht nog niet af had kun je verder werken op de git branch startpunt-angular. Hier staat het
+uitgangspunt voor deze opdracht.
+
+Als je in je eigen omgeving werkt, typ: git checkout startpunt-angular. Als je in stackblitz werkt, ga
+naar: https://stackblitz.com/github/ilionx/flasher/tree/startpunt-angular.
+
 1. Koppel de ion-input aan de formControl met naam howManyTimes:
-  - <ion-input [formControl]="howManyTimes" ...>
+   - <ion-input [formControl]="howManyTimes" ...>
 2. Koppel de ion-range aan de formControl met de naam howLong?
-  - <ion-input [formControl]="howLong" ...>
+   - <ion-input [formControl]="howLong" ...>
 3. Voeg een event-handler toe aan de ion-button:
-  - <ion-button (click)="onStart()"...>
+   - <ion-button (click)="onStart()"...>
 4. Om de button te laten knipperen gaan we de kleur wisselend aanpassen:
-  - <ion-button [color]="on ? 'alert' : 'primary'" ...>
+   - <ion-button [color]="on ? 'alert' : 'primary'" ...>
 
 ## Opdracht 3: ionic native
 
@@ -80,12 +86,17 @@ Pas nu de code aan:
 
 1. Aan app.module.ts, voeg Flashlight toe aan de providers. Vergeet in de eerste stap niet /ngx aan het einde van je
    import toe te voegen. Dit gaat soms mis als je de autocompletefunctie van je IDE gebruikt.
-  - import {Flashlight} from '@ionic-native/flashlight/ngx'
-  - providers: [{provide: ...}, Flashlight]
+   - import {Flashlight} from '@ionic-native/flashlight/ngx'
+   - providers: [{provide: ...}, Flashlight]
 2. Injecteer Flashlight in de constructor van home.page.ts:
-  - constructor(private flashlight: FlashLight) {}
+   - constructor(private flashlight: FlashLight) {}
 3. Binnen de subscribe, voeg de volgende regel toe:
-  - this.flashlight.toggle();
+   - this.flashlight.toggle();
+
+## Volledige uitwerking
+
+De volledige uitwerking van de opdracht staat op git branch
+uitwerking (https://stackblitz.com/github/ilionx/flasher/tree/uitwerking).
 
 ## Software op je telefoon draaien
 
