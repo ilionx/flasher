@@ -13,8 +13,29 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Flashlight</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      We gaan het flitslicht van je camera laten knipperen.
+      Vul hieronder de opties in.
+
+      <ion-item>
+        <ion-label>Hoeveel keer?</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label slot="start">Hoe lang?</ion-label>
+        <ion-range min="100" max="1000">
+        </ion-range>
+      </ion-item>
+
+      <ion-button [color]="on ? 'alert' : 'primary'">Start</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
