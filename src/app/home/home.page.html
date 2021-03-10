@@ -24,16 +24,16 @@
 
       <ion-item>
         <ion-label>Hoeveel keer?</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input [formControl]="howManyTimes" type="number"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label slot="start">Hoe lang?</ion-label>
-        <ion-range min="100" max="1000">
+        <ion-range [formControl]="howLong" min="100" max="1000">
         </ion-range>
       </ion-item>
 
-      <ion-button [color]="on ? 'alert' : 'primary'">Start</ion-button>
+      <ion-button (click)="onStart()" [color]="on ? 'alert' : 'primary'">Start</ion-button>
 
     </ion-card-content>
   </ion-card>
