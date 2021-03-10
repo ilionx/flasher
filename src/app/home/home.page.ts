@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {interval} from 'rxjs';
 import {take} from 'rxjs/operators';
+import {Flashlight} from '@ionic-native/flashlight/ngx';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomePage {
   howLong = new FormControl(500);
   on = false;
 
-  constructor() {
+  constructor(private flashlight: Flashlight) {
   }
 
   onStart() {
@@ -22,6 +23,7 @@ export class HomePage {
       take(this.howManyTimes.value * 2)
     ).subscribe(() => {
       this.on = !this.on;
+      this.flashlight.toggle();
     });
   }
 }
