@@ -1,0 +1,17 @@
+{
+  "appId": "com.github.ilionx.flasher",
+  "appName": "flasher",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "server": {
+    "url": "http://192.168.178.25:8100",
+    "cleartext": true
+  }
+}
