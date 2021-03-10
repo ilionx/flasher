@@ -25,3 +25,12 @@
 #container a {
   text-decoration: none;
 }
+
+ion-input[type=number] {
+  text-align: right;
+}
+
+ion-button {
+  margin: 1rem 0;
+  float: right;
+}
